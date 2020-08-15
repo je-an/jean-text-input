@@ -44,6 +44,13 @@ define(
         TextInput.prototype.getValue = function (id) {
             return this.input.value;
         };
+        /** 
+         * Removes the value from the input
+         * @public
+         */
+        TextInput.prototype.removeValue = function () {
+            this.input.value = "";
+        };
         /** */
         TextInput.prototype._onValueChanged = function () {
             this.options.onValueChanged(this.input.value);

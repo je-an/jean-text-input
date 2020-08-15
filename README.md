@@ -60,6 +60,10 @@ Returns the value of the input
 **Returns**
 - `String` - value of the input
 
+### TextInput.removeValue() 
+
+Removes the value from the input
+
 
 ## Tests
 
