@@ -1,0 +1,29 @@
+{
+  "name": "jean-text-input",
+  "version": "0.0.0",
+  "description": "Provides basic text input",
+  "main": ".js",
+  "scripts": {
+    "test": "open spec/spec-runner.html in browser"
+  },
+  "keywords": "",
+  "author": "Jeremias Andris",
+  "license": "MIT",
+  "dependencies": {
+    "jean-amd": "latest",
+    "jean-dom-element": "latest",
+    "jean-dom-util": "latest",
+    "jean-failure": "latest",
+    "jean-inheritance": "latest",
+    "jean-merge": "latest",
+    "jean-type-check": "latest"
+  },
+  "devDependencies": {
+    "require-css": "^0.1.10",
+    "text": "github:requirejs/text"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/je-an/jean-text-input.git"
+  }
+}
