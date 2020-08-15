@@ -10,7 +10,7 @@ define(
     ], function (DomElement, DomUtil, Inheritance, TypeCheck, Failure, Merge) {
         /**
          * Provides basic text input 
-         * @alias TextInput 
+         * @alias TextInput
          * @constructor
          * @param {Object} options - options object
          * @param {Function} [options.id] - Id of the text input
