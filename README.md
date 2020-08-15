@@ -10,7 +10,7 @@ Supports AMD eco system. If there is no loader, TextInput is registered as a bro
 ```js
  var input = new TextInput({
     id: "InputID",
-    onInputChanged: function (value){
+    onValueChanged: function (value){
         console.log(value);
     }
 });

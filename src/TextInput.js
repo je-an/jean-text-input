@@ -14,17 +14,17 @@ define(
          * @constructor
          * @param {Object} options - options object
          * @param {Function} [options.id] - Id of the text input
-         * @param {Function} [options.onInputChanged] - Get's called when the text input changed
+         * @param {Function} [options.onValueChanged] - Get's called when the text input changed
          */
         var TextInput = function (options) {
             var defaultOptions = {};
             Inheritance.inheritConstructor(DomElement, this, Merge({
                 html: '<div class="jean-text-input"><input class="input" type="text" /></div>',
                 id: TypeCheck.isString(options.id) ? options.id : "",
-                onInputChanged: TypeCheck.isFunction(options.onInputChanged) ? options.onInputChanged : function () { }
+                onValueChanged: TypeCheck.isFunction(options.onValueChanged) ? options.onValueChanged : function () { }
             }, TypeCheck.isDefined(options) ? options : {}));
             this.input = DomUtil.getChildByClass(this.element, "input");
-            this.input.addEventListener("input", this._onInputChanged.bind(this));
+            this.input.addEventListener("input", this._onValueChanged.bind(this));
             this.element.setAttribute("id", this.options.id);
         };
         Inheritance.inheritPrototype(TextInput, DomElement);
@@ -45,8 +45,8 @@ define(
             return this.input.value;
         };
         /** */
-        TextInput.prototype._onInputChanged = function () {
-            this.options.onInputChanged(this.input.value);
+        TextInput.prototype._onValueChanged = function () {
+            this.options.onValueChanged(this.input.value);
         };
         return TextInput;
     });
