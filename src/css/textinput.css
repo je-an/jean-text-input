@@ -1,3 +1,10 @@
-#jean-text-input{
-    
+.jean-text-input {
+  padding: 5px;
+}
+.jean-text-input input {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: transparent;
+  width: 100%;
 }

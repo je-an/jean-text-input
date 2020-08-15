@@ -8,14 +8,23 @@ Supports AMD eco system. If there is no loader, TextInput is registered as a bro
 ## Code Example
 - Use it as browser variable
 ```js
-var obj = new TextInput();
-
-
+ var input = new TextInput({
+    id: "InputID",
+    onInputChanged: function (value){
+        console.log(value);
+    }
+});
+document.getElementById("jean-text-input-container").appendChild(input.element);
+// Set a value to the input 
+ control.setValue("hello world");
+// Get the value from the control 
+ var value = control.getValue();
 ```
 - Use it with require.js
 ```js
 require(["path/to/TextInput"], function(TextInput){
     // Work with TextInput
+     
 });
 ```
 
@@ -32,7 +41,24 @@ require(["path/to/TextInput"], function(TextInput){
 ### TextInput Constructor
 
 **Options**
-- **placeholder**: `String` - `mandatory` - description
+- **id**: `String` - `optional` - Id of the text input
+- **onValueChanged**: `Function` - `optional` - Get's called if the value changes
+
+
+### TextInput.setValue(value) 
+
+Sets the provided value 
+
+**Parameters**
+- **value**: `Number|String` -  value to be set to text input
+
+
+### TextInput.getValue() 
+
+Returns the value of the input
+
+**Returns**
+- `String` - value of the input
 
 
 ## Tests

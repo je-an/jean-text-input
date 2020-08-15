@@ -8,6 +8,7 @@
             margin: 0;
             width: 100%;
             height: 100%;
+            background: red;
         }
     </style>
 </head>
@@ -17,9 +18,15 @@
     <script src="../dist/jean-text-input.js"></script>
     <script>
         var control = new TextInput({
-           
+            id: "InputID",
+            onInputChanged: function (value) {
+                console.log(value);
+            }
         });
         document.getElementById("jean-text-input-container").appendChild(control.element);
+
+        control.setValue("hello world");
+        console.log(control.getValue());
     </script>
 </body>
 
